@@ -1,4 +1,5 @@
 <?php
+
 require_once '../config/db.php';
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;

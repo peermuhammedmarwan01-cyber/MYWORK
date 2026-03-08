@@ -1,4 +1,7 @@
 <?php
+
+require_once 'functions.php';
+isAdminLoggedIn();
 require_once '../config/db.php';
 
 $message = '';

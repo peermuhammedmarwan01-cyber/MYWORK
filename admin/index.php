@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once '../functions.php';
+isAdminLoggedIn();
 require_once '../config/db.php';
 
 // Get statistics

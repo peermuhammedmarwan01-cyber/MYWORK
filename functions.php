@@ -1,5 +1,7 @@
 <?php
+ 
 require_once 'config/db.php';
+
 
 /**
  * Get all portfolio images grouped by category
@@ -47,5 +49,14 @@ if (isset($_GET['get_portfolio']) && $_GET['get_portfolio'] == '1') {
     
     echo json_encode($items);
     exit;
+}
+
+function isAdminLoggedIn() {
+   
+   
+    if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== true) {
+        header("Location: login.php");
+        exit();
+    }
 }
 ?>
